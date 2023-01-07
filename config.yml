@@ -1,0 +1,183 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Europa."
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+    
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: texte
+      name: Texte
+      title: Texte
+      url: /personen
+      weight: 1
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Europa."
+  description: ""
+  # staticPath: ""  # The path to serve the static files from
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    brandName: "Europa." # Brand name for the brand | default is the title variable
+    disableSearch: true
+    menus:
+      disableAbout: true
+      disableExperience: false
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: true
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Europa."
+    title: "Jeder Mensch ist ganz normal anders"
+      #subtitle: "I build things for the web"
+      #content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+      #image: /images/hero.svg
+    button:
+      enable: true
+      name: "Personen"
+      url: "#experience"
+      download: true
+      newPage: false
+
+
+
+  # Experience
+  experience:
+    enable: true
+    title: "Personen"
+    items:
+      - job: "Altag als Blinde Schauspielerin"
+        company: "Johanna"
+        companyUrl: "/personen/johanna"
+          #date: "Jan 2022 - present"
+          #
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          name: "Mehr erfahren"
+          url: "/personen/johanna"
+        content: "Ich bin Johanna und ich bin blind. Aber das hält mich nicht davon ab, mein Leben voll und ganz zu genießen. Ich bin Schauspielerin und spiele in Theaterstücken, ich gehe gerne wandern und reise. Ich möchte zeigen, dass Behinderungen keine Grenzen setzen müssen und dass jeder Mensch wertvoll ist."
+
+      - job: "Flüchtling aus Syrien"
+        company: "Mustafa"
+        companyUrl: "personen/mustafa"
+          #date: "Sep 2020 - Dec 2021"
+        featuredLink:
+          enable: true
+          name: "Mehr erfahren"
+          url: "personen/mustafa"
+        info:
+          enable: false
+            #content: 
+        content: |
+          Ich bin Mustafa und ich komme aus Syrien. In meinem Land habe ich als Arzt gearbeitet, aber als ich vor dem Krieg fliehen musste, habe ich alles verloren. Jetzt lebe ich in Deutschland und versuche, hier einen neuen Anfang zu machen. Ich möchte zeigen, dass Integration möglich ist und dass wir alle zusammen etwas bewirken können.
+      - job: "Leben mit Autismus"
+        company: "Max"
+        companyUrl: "personen/max"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          name: "Mehr erfahren"
+          url: "personen/max"
+        content: |
+          Ich bin Max und ich bin Autist. Für mich sieht die Welt anders aus und ich denke manchmal anders als andere. Aber das macht mich nicht weniger wertvoll. Ich möchte zeigen, dass Autismus kein Handicap ist, sondern eine andere Art zu denken und zu fühlen, die wichtig für unsere Gesellschaft ist.
+      - job: "Älter als 80 Jahre"
+        company: "Maria"
+        companyUrl: "personen/maria"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          url: "personen/maria"
+        content: |
+          Ich bin Maria und ich bin älter als 80 Jahre. In meinem Leben habe ich viel erlebt und viel gelernt. Ich möchte zeigen, dass Alter keine Grenzen setzen muss und dass wir auch im hohen Alter noch viel beitragen können.
+
+
+    #Contact
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
